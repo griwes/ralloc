@@ -1,0 +1,8 @@
+*~
+.color_coded
+.ycm*
+*.d
+*.o
+*.so
+tests/test
+
