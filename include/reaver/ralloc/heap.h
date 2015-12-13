@@ -482,8 +482,15 @@ namespace reaver
 
                         _entered = false;
 
-                        _reserve_chunk = make_unique<_chunk>();
-                        _reserve_descriptor = make_unique<_chunk_descriptor>();
+                        if (!_reserve_chunk)
+                        {
+                            _reserve_chunk = make_unique<_chunk>();
+                        }
+
+                        if (!_reserve_descriptor)
+                        {
+                            _reserve_descriptor = make_unique<_chunk_descriptor>();
+                        }
                     }
 
                     return make_unique<T>();
